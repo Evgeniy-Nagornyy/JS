@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+    // 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.    
+        // let lst = [2,3];
+        // let i = 3;
+        // while (i <= 100) {
+        //     if ((i>10) && (i%10 == 5)) {
+        //         i += 2;
+        //         continue;
+        //     }
+        //     let j = 2;
+        //     while (j < i) {
+        //         if(j*j-1 > i){
+        //             lst.push(i);
+        //             j = 2;
+        //             break;
+        //         }
+        //         if(i % j == 0) { 
+        //             j = 2;   
+        //             break;
+        //         }
+        //         j++
+        //     }  
+        //     i += 2;
+        // }
+        // alert(lst);
+
+    // 2. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+    let basket = [30,50,5,2];
+    
+    function countBasketPrice (arr){
+        let result = 0;
+        for (let i in arr){
+            result += arr[i];
+        }
+        return(result);     
+    }
+    alert(countBasketPrice(basket));
+        
+
+    </script>
+    
+
+</body>
+</html>
