@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Написать функцию, преобразующую число в объект. 
+        let n = 456;
+        n += '';
+        function trf(num){
+            if (num.length>3) {
+                alert(`${num} больше 999`)
+            }
+            else if (num.length == 3){
+                n = {'единицы': n[2], 'десятки': n[1], 'сотни': n[0]};
+            }
+            else if (num.length == 2) {
+                n = {'единицы': n[1], 'десятки': n[0]}
+            }
+            else if (num.length == 1) {
+                n = {'единицы': n[0]} 
+            }
+        };
+        trf(n);
+        alert(`единицы = ${n.единицы} десятки = ${n.десятки} сотни = ${n.сотни}`);
+
+        // Продолжить работу с интернет-магазином:
+        // Какими объектами можно заменить их элементы?
+        let basket = [{'name':'яблоки', 'count': 4, 'price': 30},
+                      {'name':'груши', 'count': 1,'price': 50},
+                      {'name':'бананы', 'count': 2,'price': 20},
+                      {'name':'репа', 'count': 5,'price': 60}];
+        
+        function countBasketPrice (arr){
+            let result = ['',0];
+            for (let i in arr){
+                result[1] += arr[i].price * arr[i].count;
+                result[0] += arr[i].name +  ` (${arr[i].count})шт. ${arr[i].price * arr[i].count}р` + '\n';
+            }
+            return(`список покупок:\n${result[0]} \nитого: ${result[1]} р.`);     
+    }
+    alert(countBasketPrice(basket));
+        
+
+    </script>
+</body>
+</html>
